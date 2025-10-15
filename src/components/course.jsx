@@ -27,6 +27,7 @@ const courses = [
   {
     id: 2,
     title: 'Costas',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 249,
     image: Costas,
     description: 'Aprenda a manter, ajustar e finalizar a partir da pegada de costas, dominando variações de estrangulamento, chaves de braço e perna, e o uso estratégico do crucifixo e do ushiro sankaku.',
@@ -35,6 +36,7 @@ const courses = [
   {
     id: 3,
     title: 'Arm Lock',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 147,
     image: ArmLock,
     description: 'Aprenda a aplicar a chave de braço em todas as posições, dominando ataques de alta velocidade da guarda, da montada e do 100 quilos, além de desenvolver ajustes técnicos para isolar o braço, anular a defesa e fazer transições de ataque.',
@@ -43,6 +45,7 @@ const courses = [
   {
     id: 4,
     title: 'Kimura',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 197,
     image: Kimura,
     description: 'Domine a Kimura em todas as suas formas (dorsal, lateral, Trimura), aprendendo transições essenciais para chaves de braço, Mata Leão e ataques de perna. O curso cobre aplicações em pé, meia guarda, norte-sul e quatro apoios, transformando a Kimura na base de seu ataque versátil.',
@@ -51,6 +54,7 @@ const courses = [
   {
     id: 5,
     title: 'Defesas de Finalizações',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 197,
     image: DefesasFinalizacoes,
     description: 'Domine a defesa contra todas as finalizações essenciais, focando em escapar da Guilhotina, rodar e posturar contra o Armlock e Triângulo, e desarmar a mecânica da Kimura.',
@@ -59,6 +63,7 @@ const courses = [
   {
     id: 6,
     title: 'Triângulo',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 197,
     image: Triangulo,
     description: 'Domine o Triângulo em suas formas frontal (Omote), lateral (Yoko) e traseira (Ushiro), a partir da guarda fechada, sentada, 100 quilos e montada. Aprenda exercícios fundamentais, transições para o Heel Hook e Kimura, e estratégias avançadas para usar o Triângulo na defesa de quedas e em situações de dog fight, tornando-o sua finalização mais versátil.',
@@ -67,6 +72,7 @@ const courses = [
   {
     id: 7,
     title: 'Passagens de Guarda',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 297,
     image: PassagemGurda,
     description: 'Domine as três principais estratégias de passagem (Toreada, Flutuação e Bodylock). Aprenda os fundamentos do footwork e os métodos ideais para abrir a guarda fechada, neutralizar desequilíbrios e quebrar as defesas mais resistentes, como o knee shield, garantindo a estabilização e a transição para posições de domínio.',
@@ -75,6 +81,7 @@ const courses = [
   {
     id: 8,
     title: 'Hellhook',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 247,
     image: Heelhook,
     description: 'Domine o sistema completo de Retenção e Reposição de Guarda, utilizando movimentos de fuga de quadril e o controle das "Leis" do corpo. Construa transições avançadas a partir da Guarda X e De La Riva Reversa, focando na finalização imediata com um vasto arsenal de ataques de perna, incluindo heel hooks da guarda fechada.',
@@ -83,6 +90,7 @@ const courses = [
   {
     id: 9,
     title: 'Quedas e Habilidades',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 297,
     image: QuedasHabilidades,
     description: 'Domine o Wrestling e o Judô para Grappling. Aprenda a executar as quedas Double Leg e Single Leg em diversas variações, conectando-as a finalizações em pé (Ankle Pick, Knee Pick) e ao controle estratégico via Body Lock. Desenvolva sua postura, distância e a habilidade de pontuar no combate em pé.',
@@ -91,6 +99,7 @@ const courses = [
   {
     id: 10,
     title: 'Guarda',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 197,
     image: Guarda,
     description: 'Aprenda o sistema de ataque da guarda focado em desequilíbrio e dilemas. Domine reversões de Wrestle-up, Tripé e Sumi Gaeshi, e utilize a Guarda X como plataforma principal. O curso ensina a converter a elevação de quadril em finalizações (Triângulo, Headlocks) e pegadas de costas instantâneas.',
@@ -99,6 +108,7 @@ const courses = [
   {
     id: 11,
     title: 'Sankaku',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 197,
     image: Sankaku,
     description: 'Falta essa página',
@@ -107,6 +117,7 @@ const courses = [
   {
     id: 12,
     title: 'Segredos do Heel Hook',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 137,
     image: SegredosHeel,
     description: 'Aprenda o sistema completo da Guarda One Leg X, desde os conceitos básicos e drills de fluidez até a evolução direta para o Cross Ashi Garami. Domine o ataque de Heel Hook e desenvolva defesas e passagens específicas para anular essa guarda.',
@@ -115,6 +126,7 @@ const courses = [
   {
     id: 13,
     title: 'Quedas e Habilidades em Pé',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 137,
     image: Quedas2,
     description: 'Domine a luta em pé e a transição para o solo. Aprenda a conectar ataques de Arm Drag e 2-em-1, finalizar com Headlocks (Guilhotina, Darce, Anaconda) e garantir as costas no 4 apoios. O curso também oferece defesas essenciais de quedas (Sprawl, Limp Leg) para anular a ofensiva do oponente.',
@@ -123,6 +135,7 @@ const courses = [
   {
     id: 14,
     title: 'Atacando na Montada',
+    instructor: 'Marco Aurellio de Queiroz',
     price: 129,
     image: AtacandoMontada,
     description: 'Domine as posições superiores, focando em estabilizar a Montada e o 100 quilos usando o Underhook e o Knee Drive. O curso ensina a encadear finalizações de alto percentual, como Kata Gatame, Juji Gatame e Triângulo, com transições diretas para a Pegada de Costas (Ushiro Sankaku).',

@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import ReactCountryFlag from "react-country-flag"; 
-import { Globe, Instagram, Trophy, ChevronRight, X, User, Star, MapPin } from "lucide-react";
+import ReactCountryFlag from "react-country-flag";
+import { Globe, Instagram, Trophy, ChevronRight, X, User, Star } from "lucide-react";
+
+
 
 const marcoData = {
     bio: 'Faixa preta desde 2014, diplomado e reconhecido pelo principal órgão de Jiu Jitsu (IBJJF). Líder e proprietário da equipe Pirâmide Grappling Association (reconhecida pela IBJJF).',
     patrocinadores: [
-        'Arquitetarte', 'Instituto Fisio Azevedo', 'Black Barber', 'Estasa Seguros', 
+        'Arquitetarte', 'Instituto Fisio Azevedo', 'Black Barber', 'Estasa Seguros',
         'Nutropia', 'Estasa', 'Voük'
     ],
     objetivo: 'Atleta de alto rendimento de destaque no cenário internacional, busca patrocínios e parcerias visando melhorar seu desempenho em treinamentos e competições, aumentando a visibilidade de seus parceiros.',
@@ -17,16 +19,18 @@ const marcoData = {
         '🥇 Campeão Rio Winter Open Nogi (2022)',
         '🥈 Vice campeão brasileiro nogi (2022)',
         '🥉 3º lugar Sul-americano Sem Kimono (2021)',
+        '🏆 Múltiplos títulos Faixa Marrom (4x Campeão Estadual)',
+        '🥈 Vice campeão americano Nogi IBJJF (California - Faixa Marrom)'
     ],
     seminariosInternacionais: [
         { nome: 'Oslo, Noruega', codigo: 'NO' },
-        { nome: 'Stavanger, Noruega', codigo: 'NO' }, 
-        { nome: 'Munique, Alemanha', codigo: 'DE' }, 
-        { nome: 'Graz, Áustria', codigo: 'AT' }, 
-        { nome: 'Viena, Áustria', codigo: 'AT' }, 
-        { nome: 'Antofagasta, Chile', codigo: 'CL' }, 
-        { nome: 'Dudelange, Luxemburgo', codigo: 'LU' }, 
-        { nome: 'Santiago, Chile', codigo: 'CL' }, 
+        { nome: 'Stavanger, Noruega', codigo: 'NO' },
+        { nome: 'Munique, Alemanha', codigo: 'DE' },
+        { nome: 'Graz, Áustria', codigo: 'AT' },
+        { nome: 'Viena, Áustria', codigo: 'AT' },
+        { nome: 'Antofagasta, Chile', codigo: 'CL' },
+        { nome: 'Dudelange, Luxemburgo', codigo: 'LU' },
+        { nome: 'Santiago, Chile', codigo: 'CL' },
         { nome: 'Dubai, EAU', codigo: 'AE' }
     ],
     cardHighlights: [
@@ -54,7 +58,7 @@ const lucasData = {
         'Múltiplos IBJJF Opens',
         'Campeonatos Estaduais',
     ],
-    instagram: "#", 
+    instagram: "#",
     lideranca: 'IBJJF Certified'
 };
 
@@ -62,29 +66,32 @@ const instructorsData = [
     {
         name: 'Marco Aurellio de Queiroz',
         rank: 'Faixa Preta desde 2014',
+        role: 'Head Instructor',
         ...marcoData,
     },
     {
         name: 'Lucas Alexandre de Queiroz',
         rank: 'Faixa Preta desde 2019',
+        role: 'Instructor',
         ...lucasData,
     },
 ];
+
 
 const InstructorModal = ({ show, onClose, instructor }) => {
     if (!show || !instructor) return null;
 
     const data = instructor;
-    const getCountryName = (str) => str.split(', ').pop(); 
+    const getCountryName = (str) => str.split(', ').pop();
 
     return (
-        <div 
+        <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity"
             onClick={onClose}
         >
-            <div 
+            <div
                 className="bg-slate-800/95 max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl border border-slate-700/50 transform transition-all p-6 sm:p-8 animate-in zoom-in-50 duration-300"
-                onClick={e => e.stopPropagation()} 
+                onClick={e => e.stopPropagation()}
             >
                 <div className="flex justify-between items-start border-b border-slate-700 pb-3 mb-6">
                     <div>
@@ -97,25 +104,26 @@ const InstructorModal = ({ show, onClose, instructor }) => {
                 </div>
 
                 <div className="space-y-8 text-left">
-                    
+
                     <div className="bg-slate-700/30 p-4 rounded-lg">
-                        <h4 className="text-xl font-bold text-white mb-2 flex items-center space-x-2"><User className="w-5 h-5 text-green-500"/> <span>Sobre</span></h4>
+                        <h4 className="text-xl font-bold text-white mb-2 flex items-center space-x-2"><User className="w-5 h-5 text-green-500" /> <span>Sobre</span></h4>
                         <p className="text-slate-300">{data.bio}</p>
                     </div>
 
                     {data.objetivo && (
-                         <div className="bg-slate-700/30 p-4 rounded-lg">
-                            <h4 className="text-xl font-bold text-white mb-2 flex items-center space-x-2"><Star className="w-5 h-5 text-green-500"/> <span>Objetivo</span></h4>
+                        <div className="bg-slate-700/30 p-4 rounded-lg">
+                            <h4 className="text-xl font-bold text-white mb-2 flex items-center space-x-2"><Star className="w-5 h-5 text-green-500" /> <span>Objetivo</span></h4>
                             <p className="text-slate-300">{data.objetivo}</p>
                         </div>
                     )}
 
                     {data.historico.length > 0 && (
                         <div>
-                            <h4 className="text-xl font-bold text-white mb-3 flex items-center space-x-2"><Trophy className="w-5 h-5 text-green-500"/> <span>Histórico de Títulos</span></h4>
+                            <h4 className="text-xl font-bold text-white mb-3 flex items-center space-x-2"><Trophy className="w-5 h-5 text-green-500" /> <span>Histórico de Títulos</span></h4>
                             <ul className="space-y-2 max-h-80 overflow-y-auto pr-2 custom-scrollbar">
                                 {data.historico.map((t, i) => (
                                     <li key={i} className="flex items-start space-x-2 text-slate-300 text-sm">
+                                        <Trophy className="w-4 h-4 text-green-500 flex-shrink-0 mt-1" />
                                         <span>{t.trim()}</span>
                                     </li>
                                 ))}
@@ -126,22 +134,22 @@ const InstructorModal = ({ show, onClose, instructor }) => {
                     {data.seminariosInternacionais && data.seminariosInternacionais.length > 0 && (
                         <div>
                             <h4 className="text-xl font-bold text-white mb-3 flex items-center space-x-2">
-                                <Globe className="w-5 h-5 text-green-500"/> 
+                                <Globe className="w-5 h-5 text-green-500" />
                                 <span>Experiência Internacional</span>
                             </h4>
                             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-2 text-slate-300 text-sm">
                                 {data.seminariosInternacionais.map((s, i) => (
                                     <li key={i} className="flex items-center space-x-2">
-                                        <ReactCountryFlag 
-                                            countryCode={s.codigo} 
-                                            svg 
-                                            style={{ 
-                                                width: '1.25em', 
-                                                height: '1.25em', 
+                                        <ReactCountryFlag
+                                            countryCode={s.codigo}
+                                            svg
+                                            style={{
+                                                width: '1.25em',
+                                                height: '1.25em',
                                             }}
                                             className="rounded-sm shadow-md flex-shrink-0"
                                         />
-                                        <span>{getCountryName(s.nome)}</span> 
+                                        <span>{getCountryName(s.nome)}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -150,7 +158,7 @@ const InstructorModal = ({ show, onClose, instructor }) => {
 
                     {data.patrocinadores && data.patrocinadores.length > 0 && (
                         <div>
-                            <h4 className="text-xl font-bold text-white mb-3 flex items-center space-x-2"><Star className="w-5 h-5 text-green-500"/> <span>Parceiros Atuais</span></h4>
+                            <h4 className="text-xl font-bold text-white mb-3 flex items-center space-x-2"><Star className="w-5 h-5 text-green-500" /> <span>Parceiros Atuais</span></h4>
                             <ul className="grid grid-cols-2 gap-2 text-slate-300 text-sm list-disc pl-4">
                                 {data.patrocinadores.map((p, i) => <li key={i}>{p}</li>)}
                             </ul>
@@ -161,6 +169,7 @@ const InstructorModal = ({ show, onClose, instructor }) => {
         </div>
     );
 };
+
 
 function Instructors() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -180,12 +189,12 @@ function Instructors() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1E1E28] text-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16 animate-in fade-in-0 slide-in-from-top-4 duration-1000">
-                    
+
                     <h3 className="text-5xl font-extrabold mb-2 tracking-tight 
                                    bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-600">
-                        Instrutores
+                        Conheça Nossos Instrutores
                     </h3>
-                    
+
                     <p className="text-slate-300 text-lg">
                         Lendas do Jiu-Jitsu dedicadas à sua evolução.
                     </p>
@@ -212,7 +221,6 @@ function Instructors() {
                                 <h5 className="text-sm font-bold text-green-400 border-b border-green-500/30 pb-1 mb-2">Destaques</h5>
                                 {instructor.cardHighlights.map((highlight, idx) => (
                                     <div key={idx} className="flex items-start space-x-2 text-slate-300 text-sm">
-                                        {/* Ícones: Verde */}
                                         {highlight.includes('Seminários') ? (
                                             <Globe className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                                         ) : (
@@ -231,7 +239,7 @@ function Instructors() {
                                     Ver Currículo Completo
                                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                 </button>
-                                
+
                                 <a
                                     href={instructor.instagram}
                                     target="_blank"
@@ -246,10 +254,9 @@ function Instructors() {
                 </div>
             </div>
 
-            {/* Renderiza o Modal */}
-            <InstructorModal 
-                show={isModalOpen} 
-                onClose={closeModal} 
+            <InstructorModal
+                show={isModalOpen}
+                onClose={closeModal}
                 instructor={selectedInstructor}
             />
         </section>
