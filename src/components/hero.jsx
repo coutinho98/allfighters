@@ -1,5 +1,3 @@
-// src/components/Hero.jsx
-import React from 'react';
 import PresentationVideo from "../assets/video/presentation.mkv";
 
 function Hero() {
