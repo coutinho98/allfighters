@@ -1,6 +1,9 @@
 import Course from "./components/course";
 import Hero from "./components/hero";
 import Instructors from "./components/instructors";
+import FAQ from "./components/faq";
+import Footer from "./components/footer";
+import ContactCTA from "./components/contact";
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Hero />
       <Instructors />
       <Course />
+      <FAQ />
+      <ContactCTA />
+      <Footer />
     </>
   )
 }
